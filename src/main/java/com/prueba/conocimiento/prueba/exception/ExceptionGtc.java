@@ -1,12 +1,13 @@
 package com.prueba.conocimiento.prueba.exception;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Data
-@EqualsAndHashCode(callSuper = false)
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ExceptionGtc extends RuntimeException {
    // Cree esta para ir mas rapido
     private LocalDateTime fecha;

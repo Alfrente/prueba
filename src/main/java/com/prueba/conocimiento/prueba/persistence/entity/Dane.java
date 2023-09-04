@@ -14,7 +14,8 @@ public class Dane {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descripcion;
-    //private Long idTipoDane;
+    @Column(name = "id_tipodane")
+    private Long idTipoDane;
 
     @ManyToOne
     @JoinColumn(name = "id_tipodane", updatable = false, insertable = false)

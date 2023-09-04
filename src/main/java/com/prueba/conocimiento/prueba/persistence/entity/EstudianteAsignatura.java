@@ -8,13 +8,15 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "EstudianteAsignatura")
+@Table(name = "estudiante_asignatura")
 public class EstudianteAsignatura {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //private Long idEstudiante;
-    //private Long idAsignatura;
+    @Column(name = "id_estudiante")
+    private Long idEstudiante;
+    @Column(name = "id_asignatura")
+    private Long idAsignatura;
     private Double nota;
     private Integer periodo;
 
@@ -23,6 +25,6 @@ public class EstudianteAsignatura {
     private Estudiante estudiante;
 
     @ManyToOne
-    @JoinColumn(name = "id-asignatura", insertable = false, updatable = false)
+    @JoinColumn(name = "id_asignatura", insertable = false, updatable = false)
     private Asignatura asignatura;
 }

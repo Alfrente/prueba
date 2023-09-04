@@ -11,6 +11,8 @@ import java.util.List;
 public interface IEstudianRequestMapper {
 
 
+    @Mapping(target = "numerodocumento", source = "numeroDocumento")
+    @Mapping(target = "nombre", source = "nombres")
     @Mapping(target = "tipoDocumento", ignore = true)
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "grado", ignore = true)

@@ -27,7 +27,6 @@ public class EstudianteService {
         return responseMapper.toEstudianteResponseDto(repository.findById(id).orElse(null));
     }
 
-
     public List<EstudianteResponseDto> getAll() {
         return responseMapper.toEstudianteResponseListDto(repository.findAll());
     }

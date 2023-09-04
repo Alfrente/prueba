@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "TipoDane")
+@Table(name = "tipo_dane")
 public class TipoDane {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

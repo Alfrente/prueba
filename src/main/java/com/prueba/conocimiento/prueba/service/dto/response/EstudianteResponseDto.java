@@ -1,7 +1,5 @@
 package com.prueba.conocimiento.prueba.service.dto.response;
 
-
-
 import lombok.*;
 
 @Getter

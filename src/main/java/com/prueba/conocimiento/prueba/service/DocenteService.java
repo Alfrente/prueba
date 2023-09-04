@@ -35,7 +35,7 @@ public class DocenteService {
     }
 
     public DocenteResponseDto update(Long id, DocenteRequestDto docente) {
-       repository.findById(id).ifPresent(docente1 -> repository.save(docenteRequestMapper.toDocente(docente)));
+        repository.findById(id).ifPresent(docente1 -> repository.save(docenteRequestMapper.toDocente(docente)));
         //ExceptionGtc("El docente con id " + id + " no esta disponible")
         return docenteResponseMapper.toDocenteResponseDto(repository.findById(id).orElse(null));
     }

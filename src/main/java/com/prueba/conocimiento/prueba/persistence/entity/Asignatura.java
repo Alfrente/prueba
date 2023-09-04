@@ -16,10 +16,10 @@ public class Asignatura {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String descripcion;
-   // private Long idDocente;
+   private Long idDocente;
 
     @ManyToOne
-    @JoinColumn(name = "id_docente", updatable = false, insertable = false)
+    @JoinColumn(name = "idDocente", updatable = false, insertable = false)
     private Docente docente;
 
     @ManyToMany(mappedBy = "asignaturas")
